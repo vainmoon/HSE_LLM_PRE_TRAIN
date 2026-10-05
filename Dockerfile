@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends git \
 
 RUN --mount=type=cache,target=/root/.cache/pip \
     python3 -m pip install --upgrade pip \
-    && pip install 'transformers==4.52.0' 'datasets==3.6.0' 'wandb==0.19.10' 'accelerate==1.6.0'
+    && pip install 'transformers==4.52.0' 'datasets==3.6.0' 'wandb==0.19.10' \
+        'accelerate==1.6.0' 'matplotlib==3.10.3'
 
 RUN python3 -m pip install --no-cache-dir --no-build-isolation \
     'flash-attn==2.7.3'
